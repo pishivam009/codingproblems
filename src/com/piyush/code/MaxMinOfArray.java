@@ -13,6 +13,8 @@ public class MaxMinOfArray {
 		
 		return new int[]{max,min};
 	}
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] a=way1(new int[] {3,5,9,7,8,3,1,4,5});
