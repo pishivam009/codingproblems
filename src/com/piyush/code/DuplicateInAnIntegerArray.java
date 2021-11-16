@@ -17,13 +17,14 @@ public class DuplicateInAnIntegerArray {
 		}
 		return -1;
 	}
-	
-	public static int way2(int[]a) {
+
+	public static int way2(int[] a) {
 		Arrays.sort(a);
-		for(int i=1; i<a.length;i++) {
-			if(a[i]==a[i-1]) return a[i];
+		for (int i = 1; i < a.length; i++) {
+			if (a[i] == a[i - 1])
+				return a[i];
 		}
-		
+
 		return -1;
 	}
 
