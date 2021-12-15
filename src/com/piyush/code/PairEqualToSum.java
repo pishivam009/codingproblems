@@ -30,10 +30,10 @@ public class PairEqualToSum {
 			}
 		}
 		for (int i : a) {
-			if (i == k / 2) {
-				if (m.containsKey(k - i))
-					c += (m.get(k-i)*(m.get(k-i)-1) / 2)/2;  // if two halves, then it searches for itself, gives wrong value
-									//so total pairs will be n*n-1/2 as here {1,1,1,1}
+			if ((i == k / 2)&&(k%2==0)) {
+				if (m.containsKey(i))
+					c += (m.get(i)-1)*2;  // if two halves, then it searches for itself, gives wrong value
+					m.put(i, m.get(i)-1);				//so total pairs will be n*n-1/2 as here {1,1,1,1}
 			} else {
 				if (m.containsKey(k - i))
 					c += m.get(k-i);
@@ -45,8 +45,8 @@ public class PairEqualToSum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(way2(new int[] { 1, 5, 7, 1 }, 6));
-		System.out.println(way2(new int[] { 1, 1, 4, 4 }, 2));
+		//System.out.println(way2(new int[] { 48,17,34,73,69,24,54,86,82,88,23,32,66,35,46,16,8,84,81,19,97,77,23,16,20,42,41,96,5,55,93,5,24,26,29,92,2,82,30,83,21,4,15,86,39,12 }, 6));
+		System.out.println(way2(new int[] { 1, 4, 5, 1 }, 2));
 	}
 
 }

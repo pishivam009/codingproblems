@@ -55,7 +55,7 @@ public class FindMissingAndRepeating {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		way1(new int[] { 1, 3, 3 });
+		way3(new int[] { 1, 3, 3 });
 	}
 
 }
